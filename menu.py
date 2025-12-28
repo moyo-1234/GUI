@@ -1,0 +1,22 @@
+from tkinter import*
+Wind = Tk()
+Wind.title("Menu")
+mnb = Menu(Wind)
+File = Menu(mnb,tearoff=0)
+mnb.add_cascade(label = "File",menu = File)
+File.add_command(label="New Text File",command= None)
+File.add_command(label = "New File", command = None)
+File.add_command(label = "New Window", command = None)
+File.add_separator()
+File.add_command(label = "Open File", command = None)
+Edit = Menu(mnb,tearoff=0)
+mnb.add_cascade(label = "Edit",menu = Edit)
+Edit.add_command(label="Undo", command = None)
+Edit.add_command(label="Redo",command=None)
+Edit.add_separator()
+Edit.add_command(label = "Cut", command = None)
+Edit.add_command(label = "Copy", command = None)
+
+
+Wind.config(menu = mnb)
+Wind.mainloop()
